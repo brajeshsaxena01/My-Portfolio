@@ -4,6 +4,7 @@
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  margin-top: 9rem;
 
 }
 /* heading */
@@ -44,7 +45,7 @@
   /* text-decoration: none; */
 }
 .col1{
-  height: 28vh;
+  height: 35vh;
 }
 a{
   text-decoration: none;
