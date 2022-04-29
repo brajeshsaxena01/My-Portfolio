@@ -38,3 +38,22 @@
   border-radius: 19px;
 }
 
+.button{
+  border: none;
+  margin: 0.8rem;
+  /* text-decoration: none; */
+}
+.col1{
+  height: 28vh;
+}
+a{
+  text-decoration: none;
+}
+.col1>h3{
+  font-weight: bold;
+  font-family: Gumela;
+  font-size: 1.3rem;
+}
+.col1>p{
+  font-family: Gumela;
+}

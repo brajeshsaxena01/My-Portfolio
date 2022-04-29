@@ -1,12 +1,15 @@
 .n-wrapper {
   height: 10vh;
   display: flex;
+  position: fixed;
   justify-content: space-between;
   margin-bottom: 2rem;
+  /* background-color: teal; */
   top: 0;
+  width: 95%;
 }
 .n-left {
-  flex: 1;
+  flex: 2;
   align-items: center;
   justify-content: left;
   display: flex;
@@ -31,7 +34,7 @@
 .n-list > ul {
   display: flex;
   gap: 2rem;
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 
 .n-list > ul :hover {

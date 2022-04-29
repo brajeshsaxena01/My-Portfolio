@@ -29,9 +29,10 @@
 }
 .i-name > :nth-child(3) {
   font-weight: 100;
-  font-size: 14px;
+  font-size: 19px;
   color: var(--gray);
   margin-top: 10px;
+  /* border-radius: 100%; */
 }
 .i-button {
   width: 6rem;
@@ -57,7 +58,7 @@
   position: absolute;
   z-index: 1;
 }
-.i-right > :nth-child(1) {
+/* .i-right > :nth-child(1) {
   transform: scale(0.69);
   left: -15%;
   top: -9%;
@@ -66,14 +67,14 @@
   top: -4.6rem;
   transform: scale(0.67);
   left: -3rem;
-}
-.i-right > :nth-child(3) {
+} */
+.i-right > :nth-child(1) {
   transform: scale(1.4);
   left: 28%;
   width: 35%;
   /* height: 250px; */
   margin-top: 6rem;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   /* background-color: teal; */
 }
 .i-right > :nth-child(4) {

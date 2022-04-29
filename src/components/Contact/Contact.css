@@ -41,6 +41,9 @@ textarea{
     top: 1rem;
     left: 8rem;
 }
+.column-left{
+    margin-top: 5rem;
+}
 
 @media screen and (max-width: 480px) {
     .contact-form{
@@ -53,4 +56,4 @@ textarea{
         width: 16rem;
     }
 
-}   
+}  
