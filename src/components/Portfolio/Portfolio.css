@@ -5,6 +5,7 @@
   flex-direction: column;
   height: 70vh;
   margin-top: 9rem;
+  margin-left: 12rem
 
 }
 /* heading */
@@ -12,12 +13,15 @@
   color: var(--black);
   font-size: 2rem;
   font-weight: bold;
+  margin-left: -13.5rem;
 }
 
 .portfolio span:nth-of-type(2) {
   color: var(--orange);
   font-size: 2.5rem;
   font-weight: bold;
+  margin-left: -13.5rem;
+
 }
 
 /* slider */
@@ -28,6 +32,8 @@
 .portfolio-slider {
   margin-top: 3rem;
   width: 100%;
+  /* justify-content: center; */
+  /* margin-left: 10rem; */
 }
 
 .portfolio-slider .swiper-slide {
