@@ -33,13 +33,19 @@ const Contact = () => {
   };
 
   return (
+    <div>
+      <div className="contact">
+          <span style={{color: darkMode?'white': ''}}></span>
+          <span>Contact me</span>
+          {/* Contact Me */}
+      </div>
     <div className="contact-form" id="contact">
       {/* left side copy and paste from work section */}
       <div className="w-left">
         <div className="awesome">
           {/* darkMode */}
-          <span style={{color: darkMode?'white': ''}}></span>
-          <span>Contact me</span>
+          {/* <span style={{color: darkMode?'white': ''}}></span>
+          <span>Contact me</span> */}
           {/* <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
@@ -56,23 +62,23 @@ const Contact = () => {
                             </div>
                         </div> */}
                         <div class="row">
-                            <a target="_blank" href=""><i class="fas fa-map-marker-alt"></i></a>
+                            {/* <a target="_blank" href=""><i class="fas fa-map-marker-alt"></i></a> */}
                             <div class="info">
-                                <div class="head">Address</div>
+                                <div class="head">Address:-</div>
                                 <div class="sub-title">Ram Krishna Nagar, Patna-800020</div>
                             </div>
                         </div>
                         <div class="row">
-                            <i class="fas fa-envelope"></i>
+                            {/* <i class="fas fa-envelope"></i> */}
                             <div class="info">
-                                <div class="head">Email</div>
+                                <div class="head">Email:-</div>
                                 <div class="sub-title">brajeshkumarsaxena82@gmail.com</div>
                             </div>
                         </div>
                         <div class="row">
                             {/* <i class="fa-solid fa-phone"></i> */}
                             <div class="info">
-                                <div class="head">Mob no</div>
+                                <div class="head">Mob No:-</div>
                                 <div class="sub-title">+91 8340762814</div>
                             </div>
                         </div>
@@ -95,6 +101,7 @@ const Contact = () => {
           ></div>
         </form>
       </div>
+    </div>
     </div>
   );
 };

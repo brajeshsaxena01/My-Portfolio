@@ -2,11 +2,24 @@
     padding: 0 3rem 0 3rem;
     display: flex;
     height: 80vh;
-    margin-top: 4rem;
+    margin-top: 0.1rem;
       /* scroll */
   padding-top: 3rem;
 }
-
+.contact{
+    margin-top: 10rem;
+    text-align: center;
+    margin-left: -5rem;
+    
+}
+.head {
+    color:rgb(252,175,31) ;
+}
+.contact>span{
+    color: rgb(252,175,31);
+    font-weight: bold;
+    font-size: 2rem;
+}
 .c-right{
     display: flex;
     justify-content: center;
@@ -42,7 +55,8 @@ textarea{
     left: 8rem;
 }
 .column-left{
-    margin-top: 5rem;
+    margin-top: 0.1rem;
+    margin-left: 7rem;
 }
 
 @media screen and (max-width: 480px) {
