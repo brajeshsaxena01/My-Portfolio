@@ -35,7 +35,7 @@ const Portfolio = () => {
             <a href="https://udemy-cloned.vercel.app/" target="_blank">Deploy Link</a>
           </button>
           <button className="button">
-          <a href="https://udemy-cloned.vercel.app/" target="_blank">Code Source</a>
+          <a href="https://github.com/brajeshsaxena01/udemy_cloned" target="_blank">Code Source</a>
 
           </button>
 
