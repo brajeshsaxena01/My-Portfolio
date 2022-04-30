@@ -19,7 +19,7 @@ const Portfolio = () => {
       {/* slider */}
       <Swiper
         spaceBetween={30}
-        slidesPerView={3}
+        slidesPerView={2}
         grabCursor={true}
         className="portfolio-slider"
       >
