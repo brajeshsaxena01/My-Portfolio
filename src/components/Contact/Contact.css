@@ -1,73 +1,42 @@
-.contact-form{
-    padding: 0 3rem 0 3rem;
-    display: flex;
-    height: 80vh;
-    margin-top: 0.1rem;
-      /* scroll */
-  padding-top: 3rem;
-}
-.contact{
-    margin-top: 10rem;
-    text-align: center;
-    margin-left: -5rem;
-    
-}
-.head {
-    color:rgb(252,175,31) ;
-}
-.contact>span{
-    color: rgb(252,175,31);
-    font-weight: bold;
-    font-size: 2rem;
-}
-.c-right{
-    display: flex;
-    justify-content: center;
-    position: relative;
-    flex: 1;
+/** @format */
+
+.contact form {
+  margin: 1rem auto;
+  max-width: 70rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
 }
 
-.c-right>form
-{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    
+.contact form .box {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  background: none;
+  color: var(--black);
+  font-size: 1.6rem;
+  text-transform: none;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
 }
 
-.c-right .user{
-    width: 20rem;
-    height: 2rem;
-    padding: 0.3em;
-    outline: none;
-    border: 2px solid var(--orange);
-    border-radius: 8px;
-    font-size: 16px;   
+.contact form textarea {
+  height: 20rem;
+  resize: none;
 }
 
-textarea{
-    height: 4rem!important;
+.contact form .box:focus {
+  box-shadow: var(--box-shadow-inset);
 }
 
-.c-blur1{
-    top: 1rem;
-    left: 8rem;
-}
-.column-left{
-    margin-top: 0.1rem;
-    margin-left: 7rem;
-}
+ /* .share>className{
+  
+   border:2 px solid red;
+ } */
+ .share>a{
+   margin: 50px;
+ }
 
-@media screen and (max-width: 480px) {
-    .contact-form{
-        padding: 0;
-        flex-direction: column;
-        gap: 5rem;
-        height: 40rem;
-    }
-    .c-right .user{
-        width: 16rem;
-    }
-
-}  
+ .fab fa-github{
+   margin:5px;
+ }

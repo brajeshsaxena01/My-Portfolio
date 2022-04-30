@@ -1,36 +1,33 @@
-import Navbar from "./components/Navbar/Navbar";
-import Intro from "./components/Intro/Intro";
-import Skills from "./components/Skills/Skills";
+/** @format */
+
 import "./App.css";
-// import Experience from "./components/Experience/Experience";
-// import Works from "./components/Works/Works";
-import Portfolio from "./components/Portfolio/Portfolio";
-// import Testimonial from "./components/Testimonials/Testimonial";
-import Contact from "./components/Contact/Contact";
-import Footer from "./components/Footer/Footer";
-import { useContext } from "react";
-import { themeContext } from "./Context";
+import React from "react";
+import { SideBar } from "./Components/SideBar/Sidebar";
+import { Home } from "./Components/Home/Home";
+import { About } from "./Components/About/About";
+import { Resume } from "./Components/Resume/Resume";
+import { Projects } from "./Components/Projects/Projects";
+import { Contact } from "./Components/Contact/Contact";
+import { Created } from "./Components/Created";
+import { Theme } from "./Components/Theme";
+import Particles from "./Components/Particle";
+import { Party } from "./Components/Home/Home";
+
 function App() {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
   return (
-    <div
-      className="App"
-      style={{
-        background: darkMode ? "black" : "",
-        color: darkMode ? "white" : "",
-      }}
-    >
-      <Navbar />
-      <Intro />
-      <Skills />
-      {/* <Experience /> */}
-      {/* <Works /> */}
-      <Portfolio />
-      {/* <Testimonial /> */}
+    <>
+      <Party className='particle-con'>
+        <Particles />
+      </Party>
+      <Theme />
+      <SideBar />
+      <Home />
+      <About />
+      <Resume />
+      <Projects />
       <Contact />
-      <Footer />
-    </div>
+      {/* <Created /> */}
+    </>
   );
 }
 

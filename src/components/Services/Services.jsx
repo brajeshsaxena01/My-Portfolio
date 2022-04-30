@@ -1,90 +1,70 @@
-import React, { useContext } from "react";
+/** @format */
+
+import React from "react";
 import "./Services.css";
-import Card from "../Card/Card";
-import HeartEmoji from "../../img/heartemoji.png";
-import Glasses from "../../img/glasses.png";
-import download from "../../img/download.webp"
-import Humble from "../../img/humble.png";
-import { themeContext } from "../../Context";
-import { motion } from "framer-motion";
-import Resume from './resume.pdf';
-
-const Services = () => {
-  // context
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
-
-  // transition
-  const transition = {
-    duration: 1,
-    type: "spring",
-  };
-
+export const Services = () => {
   return (
-    <div className="services" id="services">
-      {/* left side */}
-      <div className="awesome">
-        {/* dark mode */}
-        <span style={{ color: darkMode ? "white" : "" }}>My Technical</span>
-        <span>Skills</span>
-        <spane>
-          I became Full Stack Web Developer at Masai School
-          <br />
-          in just 30 weeks of an intensive training.
-        </spane>
-        <a href={Resume} download>
-          <button className="button s-button">Get Resume</button>
-        </a>
-        <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
+    <section class='services' id='services'>
+      <h1 class='heading'>
+        {" "}
+        my <span>services</span>{" "}
+      </h1>
+
+      <div class='box-container'>
+        <div class='box'>
+          <i class='fas fa-code'></i>
+          <h3>web design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem quas delectus, laboriosam nulla dolore in.
+          </p>
+        </div>
+
+        <div class='box'>
+          <i class='fas fa-paint-brush'></i>
+          <h3>graphic design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem quas delectus, laboriosam nulla dolore in.
+          </p>
+        </div>
+
+        <div class='box'>
+          <i class='fas fa-mobile'></i>
+          <h3>responsive design</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem quas delectus, laboriosam nulla dolore in.
+          </p>
+        </div>
+
+        <div class='box'>
+          <i class='fas fa-bullhorn'></i>
+          <h3>digital marketing</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem quas delectus, laboriosam nulla dolore in.
+          </p>
+        </div>
+
+        <div class='box'>
+          <i class='fas fa-search-dollar'></i>
+          <h3>SEO marketing</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem quas delectus, laboriosam nulla dolore in.
+          </p>
+        </div>
+
+        <div class='box'>
+          <i class='fab fa-wordpress'></i>
+          <h3>wordpress</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem quas delectus, laboriosam nulla dolore in.
+          </p>
+        </div>
       </div>
-      {/* right */}
-      <div className="cards">
-        {/* first card */}
-        <motion.div
-          initial={{ left: "25rem" }}
-          whileInView={{ left: "14rem" }}
-          transition={transition}
-        >
-          <Card
-            emoji={HeartEmoji}
-            heading={"Skill : 1"}
-            detail={"HTML, CSS, JavaScript"}
-          />
-        </motion.div>
-        {/* second card */}
-        <motion.div
-          initial={{ left: "-11rem", top: "12rem" }}
-          whileInView={{ left: "-4rem" }}
-          transition={transition}
-        >
-          <Card
-            emoji={Glasses}
-            heading={"Skill : 2"}
-            detail={" React, Redux"}
-          />
-        </motion.div>
-        {/* 3rd */}
-        <motion.div
-          initial={{ top: "19rem", left: "25rem" }}
-          whileInView={{ left: "12rem" }}
-          transition={transition}
-        >
-          <Card
-            emoji={Humble}
-            heading={"Skill : 3"}
-            detail={
-              "Nodejs, Express"
-            }
-            color="rgba(252, 166, 31, 0.45)"
-          />
-        </motion.div>
-        <div
-          className="blur s-blur2"
-          style={{ background: "var(--purple)" }}
-        ></div>
-      </div>
-    </div>
+    </section>
   );
 };
-
-export default Services;

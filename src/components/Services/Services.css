@@ -1,75 +1,55 @@
-.services {
-  padding: 0 3rem 0 3rem;
-  display: flex;
-  height: 30rem;
-  margin-bottom: 8rem;
-  margin-top: 9rem;
-  margin-bottom: 13rem;
-  /* scroll view */
-  padding-top: 3rem;
-}
-/* left side */
-.awesome {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  /* gap: 20px; */
+/** @format */
+
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2rem;
 }
 
-.awesome > :nth-child(1) {
+.services .box-container .box {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.services .box-container .box i {
+  font-size: 4rem;
+  padding-bottom: 5rem;
+  color: #fff;
+}
+
+.services .box-container .box h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
   color: var(--black);
-  font-size: 2.5rem;
-  font-weight: bold;
 }
-.awesome > :nth-child(2) {
-  color: var(--orange);
-  font-size: 2.5rem;
-  font-weight: bold;
+
+.services .box-container .box p {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--light-color);
 }
-.awesome > :nth-child(3) {
-  color: var(--gray);
-  font-size: 14px;
-  margin-top: 1rem;
-}
-.s-button {
-  width: 8rem;
-  height: 2rem;
-  margin-top: 1rem;
-}
-/* right sided */
-.cards {
-  position: relative;
-}
-.cards > * {
+
+.services .box-container .box::before {
+  content: "";
   position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--green);
+  z-index: -1;
+  clip-path: circle(9rem at 5% 0%);
+  transition: 0.3s linear;
 }
 
-/* blur */
-.s-blur2 {
-  left: 14rem;
-  top: 8rem;
+.services .box-container .box:hover::before {
+  clip-path: circle(100%);
 }
 
-.s-blur1 {
-  top: 13rem;
-  left: -18rem;
-}
-
-@media screen and (max-width: 480px) {
-  .services {
-    margin-top: 0;
-    flex-direction: column;
-    gap: 5rem;
-    height: 66rem;
-    padding: 0;
-  }
-
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 17rem;
-  }
-  .cards > * {
-    position: static;
-  }
+.services .box-container .box:hover > * {
+  color: white;
 }
