@@ -32,6 +32,8 @@ export const Contact = () => {
       <section className="contact" id="contact">
         <h1 className="heading">
           <span>Contact</span> me{" "}
+          <br />
+          <span>Mob No:-</span>+91-8340762814{" "}
           <div className="share">
 
            
