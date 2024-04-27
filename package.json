@@ -1,5 +1,5 @@
 {
-  "name": "portfolio_v1.0-main",
+  "name": "brajesh_portfolio_v1.0-main",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,7 +23,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "type": "module",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
