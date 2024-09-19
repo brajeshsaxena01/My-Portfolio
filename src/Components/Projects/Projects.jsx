@@ -16,6 +16,56 @@ export const Projects = () => {
 
         <div className="box-container">
           <div className="box">
+            <img src="Images/e-commerce.png" alt="" />
+            <div className="content">
+              <h3>E-Commerce</h3>
+
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-around",
+                  width: "40%",
+                }}
+              >
+                <a
+                  className="icons-git"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/brajeshsaxena01/MERN-ecommerce"
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="/Images/github-brands.svg"
+                    alt=""
+                  />
+                </a>
+                <a
+                  className="icons-git"
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://mern-ecommerce-ce74.onrender.com/login"
+                >
+                  <img
+                    style={{ height: "100%", width: "100%" }}
+                    src="/Images/globe-solid.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <NewDiv>
+              <h3>Built with MongoDb, ExpressJs, NodeJs, ReactJs</h3>
+              <h3>
+                This self-paced project showcases a full-stack e-commerce
+                application. It features user authentication, product
+                management, a shopping cart with dynamic quantity adjustments,
+                and secure payment processing through Stripe. This application
+                demonstrates my ability to develop scalable and efficient web
+                solutions.
+              </h3>
+            </NewDiv>
+          </div>
+          <div className="box">
             <img src="Images/Screenshot (163).png" alt="" />
             <div className="content">
               <h3>Udemy Clone</h3>
@@ -56,13 +106,16 @@ export const Projects = () => {
             <NewDiv>
               <h3>Built with HTML,CSS, JavaScript</h3>
               <h3>
-A team project to clone udemy. It has functionalites like filtering,sorting, add to cart functionalies along with login and sign up.</h3>
+                A team project to clone udemy. It has functionalites like
+                filtering,sorting, add to cart functionalies along with login
+                and sign up.
+              </h3>
             </NewDiv>
           </div>
           <div className="box">
             <img src="Images/Screenshot (162).png" alt="" />
             <div className="content">
-              <h3>ZEE5 OTT Platform CLone</h3>
+              <h3>Mamaearth CLone</h3>
 
               <div
                 style={{
@@ -98,9 +151,12 @@ A team project to clone udemy. It has functionalites like filtering,sorting, add
               </div>
             </div>
             <NewDiv>
-              <h3>Built  with HTML,CSS, JavaScript</h3>
+              <h3>Built with HTML,CSS, JavaScript</h3>
               <h3>
-A clone of website mamaearth.in. I have given it the functionalites like login, sign up, filtering and sorting, and add to cart.</h3>
+                A clone of website mamaearth.in. I have given it the
+                functionalites like login, sign up, filtering and sorting, and
+                add to cart.
+              </h3>
             </NewDiv>
           </div>
           {/* <div className="box">

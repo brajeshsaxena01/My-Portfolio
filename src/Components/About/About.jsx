@@ -19,20 +19,23 @@ export const About = () => {
               I am <span>Brajesh Saxena</span>
             </h3>
             <p>
-            An aspiring creative observing full-stack web developer acquiring 
-            all of the technical skillsets for one to be a web developer and 
-            Hard-working and self-motivated person, with a keen interest in 
-            exploring new technologies in the web developing world. Seeking a
-            challenging position in a reputable company that is driven by 
-            technology that would utilize my potential to the fullest and also help 
-            me to grow my career and to showcase all of my technical skills
+              As a Senior Software Engineer at VisioApps Technology Pvt Ltd, I
+              am a dedicated and innovative professional with extensive
+              experience in full-stack web development. I thrive on leveraging
+              cutting-edge technologies to deliver high-quality software
+              solutions that meet client needs. My strong problem-solving skills
+              and collaborative approach allow me to lead projects effectively
+              while mentoring junior developers.
+            </p>
+            <p>
+              I am passionate about continuous learning and staying ahead of
+              industry trends, which fuels my commitment to excellence in every
+              aspect of my work. I aim to contribute to a technology-driven
+              environment that fosters growth, creativity, and the development
+              of impactful software applications.
             </p>
 
-            <a
-              className="btn"
-              href="Images/RESUME FINAL..pdf"
-              target="_blank"
-            >
+            <a className="btn" href="Images/resume.pdf" target="_blank">
               Download Resume
             </a>
           </div>

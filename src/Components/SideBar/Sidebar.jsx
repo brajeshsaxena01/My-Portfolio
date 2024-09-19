@@ -8,36 +8,37 @@ export const SideBar = () => {
   const [show, setShow] = React.useState(true);
   return (
     <>
-      <Header show={show} className='header active'>
-        <User className='user'>
-          <img src='../images/boy.jpeg' alt='' />
+      <Header show={show} className="header active">
+        <User className="user">
+          <img src="../images/boy.jpeg" alt="" />
           <h3>Brajesh Saxena</h3>
-          <p>Full Stack Developer</p>
+          <p>Senior Software Engineer</p>
         </User>
 
-        <Navbar className='navbar'>
-          <Link className='link' hashSpy={true} to='home'>
+        <Navbar className="navbar">
+          <Link className="link" hashSpy={true} to="home">
             HOME
           </Link>
-          <Link className='link' hashSpy={true} to='about'>
+          <Link className="link" hashSpy={true} to="about">
             ABOUT
           </Link>
 
-          <Link className='link' hashSpy={true} to='resume'>
+          <Link className="link" hashSpy={true} to="resume">
             SKILLS
           </Link>
-          <Link className='link' hashSpy={true} to='portfolio'>
+          <Link className="link" hashSpy={true} to="portfolio">
             PROJECTS
           </Link>
-          <Link className='link' hashSpy={true} to='contact'>
+          <Link className="link" hashSpy={true} to="contact">
             CONTACT
           </Link>
         </Navbar>
       </Header>
       <MenuBtn
         onClick={() => setShow(!show)}
-        id='menu-btn'
-        className='fas fa-bars'></MenuBtn>
+        id="menu-btn"
+        className="fas fa-bars"
+      ></MenuBtn>
     </>
   );
 };

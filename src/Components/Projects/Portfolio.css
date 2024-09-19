@@ -2,7 +2,7 @@
 
 .portfolio .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(60rem, 1fr));
   grid-gap: 2rem;
   grid-gap: 2rem;
   gap: 4rem;
@@ -16,14 +16,12 @@
   box-shadow: var(--box-shadow);
   position: relative;
   border: 1rem solid transparent;
-   
 }
 
 .portfolio .box-container .box img {
   height: 20rem;
   width: 100%;
   object-fit: cover;
-  ;
 }
 
 .portfolio .box-container .box .content {
