@@ -12,11 +12,18 @@ import { Created } from "./Components/Created";
 import { Theme } from "./Components/Theme";
 import Particles from "./Components/Particle";
 import { Party } from "./Components/Home/Home";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <>
-      <Party className='particle-con'>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        limit={1}
+      ></ToastContainer>
+      <Party className="particle-con">
         <Particles />
       </Party>
       <Theme />
