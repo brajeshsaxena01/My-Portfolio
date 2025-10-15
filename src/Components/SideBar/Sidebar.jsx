@@ -22,6 +22,21 @@ export const SideBar = () => {
           <Link className="link" hashSpy={true} to="about">
             ABOUT
           </Link>
+          <Link
+            className="link"
+            to="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(
+                "https://drive.google.com/file/d/1zDtX8nhzYAvc8jisOHI1KyzuCxkB6mbk/view?usp=drive_link",
+                "_blank",
+                "noopener,noreferrer"
+              );
+            }}
+          >
+            DOWNLOAD RESUME
+          </Link>
+
 
           <Link className="link" hashSpy={true} to="resume">
             SKILLS

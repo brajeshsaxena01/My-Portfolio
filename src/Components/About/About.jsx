@@ -35,7 +35,13 @@ export const About = () => {
               of impactful software applications.
             </p>
 
-            <a className="btn" href="Images/resume.pdf" target="_blank">
+            <a
+              className="btn"
+              href="https://drive.google.com/file/d/1zDtX8nhzYAvc8jisOHI1KyzuCxkB6mbk/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
               Download Resume
             </a>
           </div>

@@ -74,11 +74,11 @@ export const Resume = () => {
           </Card>
 
           <Card>
-            <Image>
+            <Image className="themed-img">
               <img src="/Images/nodejs.png" alt="" />
             </Image>
             <Text>
-              <span id="span" className="heading ">
+              <span id="span" className="heading">
                 Node.js
               </span>
             </Text>
@@ -128,7 +128,7 @@ export const Resume = () => {
             </Text>
           </Card>
           <Card>
-            <Image>
+            <Image className="themed-img">
               <img src="/Images/flask.svg" alt="" />
             </Image>
             <Text>
@@ -154,6 +154,36 @@ export const Resume = () => {
             <Text>
               <span id="span" className="heading ">
                 GCP
+              </span>
+            </Text>
+          </Card>
+          <Card>
+            <Image>
+              <img src="/Images/docker.png" alt="" />
+            </Image>
+            <Text>
+              <span id="span" className="heading ">
+                DOCKER
+              </span>
+            </Text>
+          </Card>
+          <Card>
+            <Image>
+              <img src="/Images/postgresql.png" alt="" />
+            </Image>
+            <Text>
+              <span id="span" className="heading ">
+                POSTGRESQL
+              </span>
+            </Text>
+          </Card>
+          <Card>
+            <Image>
+              <img src="/Images/firebase.png" alt="" />
+            </Image>
+            <Text>
+              <span id="span" className="heading ">
+                FIREBASE
               </span>
             </Text>
           </Card>
@@ -184,6 +214,56 @@ export const Resume = () => {
               </span>
             </Text>
           </Card>
+          <Card>
+            <Image>
+              <img src="/Images/figma.png" alt="" />
+            </Image>
+            <Text>
+              <span id="span" className="heading ">
+                FIGMA
+              </span>
+            </Text>
+          </Card>
+          <Card>
+            <Image>
+              <img src="/Images/jira.png" alt="" />
+            </Image>
+            <Text>
+              <span id="span" className="heading ">
+                JIRA
+              </span>
+            </Text>
+          </Card>
+          <Card>
+            <Image>
+              <img src="/Images/git.png" alt="" />
+            </Image>
+            <Text>
+              <span id="span" className="heading ">
+                GIT
+              </span>
+            </Text>
+          </Card>
+          <Card>
+            <Image>
+              <img src="/Images/netlify.png" alt="" />
+            </Image>
+            <Text>
+              <span id="span" className="heading ">
+                NETLIFY
+              </span>
+            </Text>
+          </Card>
+          <Card>
+            <Image>
+              <img src="/Images/vercel.png" alt="" />
+            </Image>
+            <Text>
+              <span id="span" className="heading ">
+                VERCEL
+              </span>
+            </Text>
+          </Card>
         </Skills>
       </Main>
     </>
@@ -196,10 +276,22 @@ const Main = styled.div`
 
 const Skills = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* desktop default */
   gap: 2rem;
   padding: 5rem 0;
   margin: 0 30px;
+
+  /* Tablet View (769px–1024px) */
+  @media screen and (max-width: 1024px) and (min-width: 769px) {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 20px;
+  }
+
+  /* Mobile View (≤768px) */
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    margin: 0 10px;
+  }
 `;
 
 const Image = styled.div`
@@ -207,9 +299,19 @@ const Image = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 0px;
+
   & img {
     width: 24%;
     height: 89%;
+
+    /* Make image scale better on smaller screens */
+    @media screen and (max-width: 1024px) {
+      width: 35%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 50%;
+    }
   }
 `;
 
@@ -227,6 +329,7 @@ const Card = styled.div`
   padding: 10px 0;
   border-radius: 4px;
   justify-content: space-around;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.04);
@@ -239,6 +342,7 @@ const Text = styled.h1`
   align-items: center;
   -webkit-align-items: none !important;
   display: -webkit-box !important;
+
   & #span {
     font-size: 17px !important;
   }

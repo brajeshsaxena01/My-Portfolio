@@ -13,7 +13,7 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_78fsvrx",
+        "service_bhw26dm",
         "template_pglijq8",
         e.target,
         "piCa0oCX2nSer1d1v"
@@ -35,7 +35,7 @@ export const Contact = () => {
   return (
     <>
       <section className="contact" id="contact">
-        <h1 className="heading">
+        <h1 className="heading" style={{fontSize: '28px'}}>
           <span>Contact</span> me <br />
           <span>Mob No:-</span>+91-8340762814{" "}
           <div className="share">

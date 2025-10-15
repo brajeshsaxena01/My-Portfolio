@@ -15,11 +15,12 @@ export const Projects = () => {
         </h1>
 
         <div className="box-container">
-          <div className="box">
+          <div className="box" style={{height: 'auto'}}>
             <img src="Images/e-commerce.png" alt="" />
             <div className="content">
               <h3>E-Commerce</h3>
-
+            </div>
+            <NewDiv>
               <div
                 style={{
                   display: "flex",
@@ -52,8 +53,6 @@ export const Projects = () => {
                   />
                 </a>
               </div>
-            </div>
-            <NewDiv>
               <h3>Built with MongoDb, ExpressJs, NodeJs, ReactJs</h3>
               <h3>
                 This self-paced project showcases a full-stack e-commerce
@@ -69,8 +68,9 @@ export const Projects = () => {
             <img src="Images/Screenshot (163).png" alt="" />
             <div className="content">
               <h3>Udemy Clone</h3>
-
-              <div
+            </div>
+            <NewDiv>
+               <div
                 style={{
                   display: "flex",
                   justifyContent: "space-around",
@@ -102,8 +102,6 @@ export const Projects = () => {
                   />
                 </a>
               </div>
-            </div>
-            <NewDiv>
               <h3>Built with HTML,CSS, JavaScript</h3>
               <h3>
                 A team project to clone udemy. It has functionalites like
@@ -117,6 +115,9 @@ export const Projects = () => {
             <div className="content">
               <h3>Mamaearth CLone</h3>
 
+              
+            </div>
+            <NewDiv>
               <div
                 style={{
                   display: "flex",
@@ -149,8 +150,6 @@ export const Projects = () => {
                   />
                 </a>
               </div>
-            </div>
-            <NewDiv>
               <h3>Built with HTML,CSS, JavaScript</h3>
               <h3>
                 A clone of website mamaearth.in. I have given it the
@@ -341,14 +340,114 @@ This project is done to translate an national language to another national langu
   );
 };
 
+// const NewDiv = styled.div`
+//   height: 10rem;
+//   width: 100%;
+//   & h3 {
+//     font-size: 1.5rem;
+//     font-weight: 600;
+//     color: var(--black);
+//     text-transform: uppercase;
+//     padding: 1rem 1rem;
+//   }
+// `;
+
+
+// const NewDiv = styled.div`
+//   width: 100%;
+//   height: auto;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+//   // text-align: center;
+//   flex-wrap: wrap; /* helps responsiveness */
+
+//   & > div {
+//     display: flex;
+//     justify-content: space-around;
+//     width: 40%;
+//   }
+
+//   & h3 {
+//     font-size: 1.5rem;
+//     font-weight: 600;
+//     color: var(--black);
+//     text-transform: uppercase;
+//     padding: 1rem;
+//     line-height: 1.5;
+//     word-wrap: break-word;
+//     flex: 1 1 100%;
+//   }
+
+//   /* ========== Tablet (769px-1024px) ========== */
+//   @media screen and (max-width: 1024px) and (min-width: 769px) {
+//     flex-direction: column;
+//     align-items: center;
+//     // text-align: center;
+//     gap: 1rem;
+
+//     & > div {
+//       width: 60%;
+//       justify-content: center;
+//       margin-bottom: 1rem;
+//     }
+
+//     & h3 {
+//       font-size: 1.4rem;
+//       width: 90%;
+//     }
+//   }
+
+//   /* ========== Mobile (≤768px) ========== */
+//   @media screen and (max-width: 768px) {
+//     flex-direction: column;
+//     align-items: center;
+//     // text-align: center;
+//     gap: 1rem;
+
+//     & > div {
+//       width: 80%;
+//       justify-content: center;
+//       margin-bottom: 1rem;
+//     }
+
+//     & h3 {
+//       font-size: 1.2rem;
+//       width: 90%;
+//       padding: 0.5rem;
+//       line-height: 1.6;
+//       word-break: break-word;
+//     }
+//   }
+// `;
+
 const NewDiv = styled.div`
-  height: 10rem;
   width: 100%;
+  height: auto; /* ✅ allow full height */
+  display: flex;
+  flex-direction: column; /* ✅ stack all children */
+  justify-content: center;
+  align-items: center;
+  // text-align: center;
+  padding: 1rem;
+
   & h3 {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--black);
     text-transform: uppercase;
-    padding: 1rem 1rem;
+    padding: 1rem;
+    line-height: 1.6;
+    word-break: break-word; /* ✅ prevent long text cutoff */
+    white-space: normal; /* ✅ allow wrapping */
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 769px),
+         screen and (max-width: 768px) {
+    height: auto; /* ✅ remove any fixed height */
+    & h3 {
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+    }
   }
 `;
