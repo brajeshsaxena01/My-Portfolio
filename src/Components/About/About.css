@@ -113,13 +113,26 @@
   width: 95%;
 }
 
-
+.link {
+  margin: 1.5rem 0;
+  padding: 0.7rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  /* box-shadow: var(--box-shadow); */
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--black);
+  cursor: pointer;
+}
 
 /* ========== TABLET VIEW (portrait tablets, 769px–1024px) ========== */
 @media screen and (max-width: 1024px) and (min-width: 769px) {
+
   /* Tablet styles here */
   body {
-    padding-left: 0; /* Example: remove sidebar padding */
+    padding-left: 0;
+    /* Example: remove sidebar padding */
   }
 
   .about .row {
@@ -136,9 +149,11 @@
 
 /* ========== MOBILE VIEW (phones, up to 768px) ========== */
 @media screen and (max-width: 768px) {
+
   /* Mobile styles here */
   body {
-    padding-left: 0; /* Ensure full width on mobile */
+    padding-left: 0;
+    /* Ensure full width on mobile */
   }
 
   .about {
@@ -163,4 +178,3 @@
     font-size: 1.5rem;
   }
 }
-

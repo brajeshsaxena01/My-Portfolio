@@ -14,6 +14,7 @@ import Particles from "./Components/Particle";
 import { Party } from "./Components/Home/Home";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Footer } from "./Components/Footer";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Projects />
       <Contact />
       {/* <Created /> */}
+      <Footer />
     </>
   );
 }

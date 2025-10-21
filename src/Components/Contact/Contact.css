@@ -4,7 +4,10 @@
   margin: 1rem auto;
   max-width: 70rem;
   border-radius: 0.5rem;
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   padding: 2rem;
 }
 
@@ -16,7 +19,10 @@
   font-size: 1.6rem;
   text-transform: none;
   margin: 0.7rem 0;
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   border-radius: 0.5rem;
 }
 
@@ -29,14 +35,15 @@
   box-shadow: var(--box-shadow-inset);
 }
 
- /* .share>className{
+/* .share>className{
   
    border:2 px solid red;
  } */
- .share>a{
-   margin: 50px;
- }
+.share>a {
+  margin: 30px;
+  color: inherit;
+}
 
- .fab fa-github{
-   margin:5px;
- }
+.fab fa-github {
+  margin: 5px;
+}

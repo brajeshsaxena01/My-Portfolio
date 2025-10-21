@@ -13,9 +13,13 @@
   height: 40rem;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: var(--box-shadow);
+  /* box-shadow: var(--box-shadow); */
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+
   position: relative;
-  border: 1rem solid transparent;
+  /* border: 1rem solid transparent; */
 }
 
 .portfolio .box-container .box img {
@@ -62,4 +66,17 @@
 
 .icons-git img {
   color: green !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 85%;
+  }
+
 }

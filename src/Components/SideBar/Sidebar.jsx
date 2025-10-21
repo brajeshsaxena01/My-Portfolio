@@ -6,6 +6,18 @@ import styled from "styled-components";
 
 export const SideBar = () => {
   const [show, setShow] = React.useState(true);
+  const fileId = "1LRKgP8s8x5DxHZC4qEgo5xdyMo_mblA8";
+  const viewUrl = `https://drive.google.com/file/d/${fileId}/view`;
+  const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  const handleDownload = () => {
+    window.open(viewUrl, "_blank");
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.setAttribute("download", "My_Resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   return (
     <>
       <Header show={show} className="header active">
@@ -22,30 +34,21 @@ export const SideBar = () => {
           <Link className="link" hashSpy={true} to="about">
             ABOUT
           </Link>
-          <Link
-            className="link"
-            to="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open(
-                "https://drive.google.com/file/d/1zDtX8nhzYAvc8jisOHI1KyzuCxkB6mbk/view?usp=drive_link",
-                "_blank",
-                "noopener,noreferrer"
-              );
-            }}
-          >
-            DOWNLOAD RESUME
-          </Link>
-
-
-          <Link className="link" hashSpy={true} to="resume">
+          <Link className="link" hashSpy={true} to="skills">
             SKILLS
           </Link>
-          <Link className="link" hashSpy={true} to="portfolio">
+          <Link className="link" hashSpy={true} to="projects">
             PROJECTS
           </Link>
           <Link className="link" hashSpy={true} to="contact">
             CONTACT
+          </Link>
+          <Link
+            className="link"
+            to="#"
+            onClick={handleDownload}
+          >
+            RESUME
           </Link>
         </Navbar>
       </Header>
@@ -101,7 +104,10 @@ const Navbar = styled.div`
     padding: 0.7rem;
     border-radius: 5rem;
     font-size: 2rem;
-    box-shadow: var(--box-shadow);
+    // box-shadow: var(--box-shadow);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
     color: var(--black);
     cursor: pointer;
   }
@@ -122,7 +128,10 @@ const MenuBtn = styled.div`
   border-radius: 50%;
   font-size: 2rem;
   cursor: pointer;
-  box-shadow: var(--box-shadow);
+  // box-shadow: var(--box-shadow);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
   text-align: center;
   color: var(--black);
   background: var(--bg-color);

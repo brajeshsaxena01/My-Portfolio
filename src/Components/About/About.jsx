@@ -2,7 +2,7 @@
 
 import React from "react";
 import "./About.css";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 export const About = () => {
   return (
@@ -35,7 +35,7 @@ export const About = () => {
               of impactful software applications.
             </p>
 
-            <a
+            {/* <a
               className="btn"
               href="https://drive.google.com/file/d/1zDtX8nhzYAvc8jisOHI1KyzuCxkB6mbk/view?usp=drive_link"
               target="_blank"
@@ -43,7 +43,10 @@ export const About = () => {
               download
             >
               Download Resume
-            </a>
+            </a> */}
+            <Link className="btn" hashSpy={true} to="contact" >
+              CONTACT ME
+            </Link>
           </div>
         </div>
       </section>

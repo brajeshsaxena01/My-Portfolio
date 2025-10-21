@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Resume = () => {
   return (
     <>
-      <Main id="resume">
+      <Main id="skills">
         <h1 className="heading">
           {" "}
           <span>my</span> skills{" "}
@@ -316,24 +316,47 @@ const Image = styled.div`
 `;
 
 const Card = styled.div`
+  // cursor: pointer;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // border-radius: 0.5rem;
+  // overflow: hidden;
+  // box-shadow: var(--box-shadow);
+  // position: relative;
+  // border: 1rem solid transparent;
+  // margin: 10px 10px;
+  // padding: 10px 0;
+  // border-radius: 4px;
+  // justify-content: space-around;
+  // transition: transform 0.3s ease;
+
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 0.5rem;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: relative;
-  border: 1rem solid transparent;
-  margin: 10px 10px;
+  margin: 10px;
   padding: 10px 0;
-  border-radius: 4px;
   justify-content: space-around;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: scale(1.04);
   }
+  @media screen and (max-width: 1024px) {
+      width: 90%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
 `;
 
 const Text = styled.h1`

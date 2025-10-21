@@ -8,14 +8,14 @@ import styled from "styled-components";
 export const Projects = () => {
   return (
     <>
-      <section className="portfolio" id="portfolio">
+      <section className="portfolio" id="projects">
         <h1 className="heading">
           {" "}
           my <span>projects</span>{" "}
         </h1>
 
         <div className="box-container">
-          <div className="box" style={{height: 'auto'}}>
+          <div className="box" style={{ height: 'auto',}}>
             <img src="Images/e-commerce.png" alt="" />
             <div className="content">
               <h3>E-Commerce</h3>
@@ -70,7 +70,7 @@ export const Projects = () => {
               <h3>Udemy Clone</h3>
             </div>
             <NewDiv>
-               <div
+              <div
                 style={{
                   display: "flex",
                   justifyContent: "space-around",
@@ -115,7 +115,7 @@ export const Projects = () => {
             <div className="content">
               <h3>Mamaearth CLone</h3>
 
-              
+
             </div>
             <NewDiv>
               <div

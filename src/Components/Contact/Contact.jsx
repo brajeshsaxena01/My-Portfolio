@@ -35,7 +35,7 @@ export const Contact = () => {
   return (
     <>
       <section className="contact" id="contact">
-        <h1 className="heading" style={{fontSize: '28px'}}>
+        <h1 className="heading" style={{ fontSize: '28px', padding: '0px' }}>
           <span>Contact</span> me <br />
           <span>Mob No:-</span>+91-8340762814{" "}
           <div className="share">

@@ -6,6 +6,19 @@ import styled from "styled-components";
 import Typewriter from "typewriter-effect";
 
 export const Home = () => {
+
+  const fileId = "1LRKgP8s8x5DxHZC4qEgo5xdyMo_mblA8";
+  const viewUrl = `https://drive.google.com/file/d/${fileId}/view`;
+  const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  const handleDownload = () => {
+    window.open(viewUrl, "_blank");
+    const link = document.createElement("a");
+    link.href = downloadUrl;
+    link.setAttribute("download", "My_Resume.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   return (
     <>
       <section className="home" id="home">
@@ -19,8 +32,8 @@ export const Home = () => {
             <Typewriter
               options={{
                 strings: [
-                  "I'm a Full Stack Web Developer",
-                  
+                  "I am a Full Stack Web Developer",
+
                 ],
                 autoStart: true,
                 loop: true,
@@ -35,15 +48,12 @@ export const Home = () => {
           >
             Download Resume
           </a> */}
-          <a
+          <button
+            onClick={handleDownload}
             className="btn"
-            href="https://drive.google.com/file/d/1zDtX8nhzYAvc8jisOHI1KyzuCxkB6mbk/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            download
           >
             Download Resume
-          </a>
+          </button>
         </div>
 
         <div className="share">
@@ -63,7 +73,7 @@ export const Home = () => {
            target="_blank"
            
           rel="noreferrer" className="fa fa-envelope"></a> */}
-             {/* <a
+          {/* <a
             target="_blank"
             href="https://www.raajrohit16201@gmail.com"
             rel="noreferrer"
@@ -79,7 +89,7 @@ export const Home = () => {
             className=  "fab fa-medium"
            
           ></a> */}
-        
+
 
 
 
