@@ -19,6 +19,19 @@ export const Navbar = () => {
     const mobileMenuRef = useRef(null);
     const hamburgerRef = useRef(null);
 
+    const fileId = "1LRKgP8s8x5DxHZC4qEgo5xdyMo_mblA8";
+    const viewUrl = `https://drive.google.com/file/d/${fileId}/view`;
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    const handleDownload = () => {
+        window.open(viewUrl, "_blank");
+        const link = document.createElement("a");
+        link.href = downloadUrl;
+        link.setAttribute("download", "My_Resume.pdf");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
@@ -76,7 +89,7 @@ export const Navbar = () => {
                 <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="relative flex-shrink-0 basis-[10%] flex justify-start"
+                    className="relative flex-shrink-0 basis-1/3 md:basis-[10%] lg:basis-1/3 flex justify-start"
                 >
                     <motion.a
                         className="font-bold gradient-text tracking-wider"
@@ -88,7 +101,7 @@ export const Navbar = () => {
                 </motion.div>
 
                 {/* --- CENTER: Navigation Links --- */}
-                <div className="hidden md:flex basis-[80%] justify-center items-center gap-3 lg:gap-6 md:gap-0">
+                <div className="hidden md:flex basis-1/3 md:basis-[80%] lg:basis-1/3 justify-center items-center gap-3 lg:gap-6 md:gap-0">
                     {navLinks.map((link) => {
                         const isActive = activeSection === link.href.substring(1);
                         return (
@@ -102,6 +115,7 @@ export const Navbar = () => {
                                     : 'text-gray-300 hover:text-white hover:glass'
                                     }`}
                                 style={{ color: 'var(--black)' }}
+                                onClick={handleDownload}
                             >
                                 {/* <span className="text-xl">{link.icon}</span> */}
                                 <span className="flex items-center gap-2">
@@ -121,7 +135,7 @@ export const Navbar = () => {
                 </div>
 
                 {/* --- RIGHT: Theme Toggler --- */}
-                <div className="hidden md:flex basis-[10%] justify-end items-center">
+                <div className="hidden md:flex basis-1/3 md:basis-[10%] lg:basis-1/3 justify-end items-center">
                     <ThemeToggler />
                 </div>
                 {/* Enhanced Mobile Menu Button */}
@@ -189,11 +203,14 @@ export const Navbar = () => {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: index * 0.1 }}
-                                        onClick={() => setOpen(false)}
+                                        onClick={() => {
+                                            setOpen(false)
+                                            handleDownload()
+                                        }}
                                         className={`flex items-center gap-4 p-4 rounded-2xl font-medium transition-all duration-300 ${isActive
                                             ? 'glass text-white shadow-lg'
                                             : 'text-gray-300 hover:text-white hover:glass'
-                                            }`}
+                                        }`}
                                     >
                                         <span className="text-xl">{link.icon}</span>
                                         <span className="text-lg" style={{ color: 'var(--black)' }}>{link.name}</span>
