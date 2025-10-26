@@ -70,9 +70,9 @@ export const Footer = () => {
                     </div>
 
                     {/* Right Section */}
-                    <div className="grid grid-cols-2 gap-8 md:flex md:space-x-10">
+                    {/* <div className="grid grid-cols-2 gap-8 md:flex md:space-x-10">
                         <div>
-                            {/* <h4 className="font-semibold mb-4 text-[24px]">Company</h4> */}
+                            <h4 className="font-semibold mb-4 text-[24px]">Company</h4>
                             <ul className="space-y-8 text-base text-[16px]">
                                 <li>
                                     <a href="#home" className="hover:text-[var(--green)]">
@@ -102,11 +102,11 @@ export const Footer = () => {
                             </ul>
                         </div>
 
-                    </div>
+                    </div> */}
                 </div>
                 <div className="mt-8 border-t border-gray-700 pt-8 text-center text-base">
                     {" "}
-                    {/* <p>© {currentYear} Your Company, Inc. All rights reserved.</p> */}
+                    <p>© {currentYear}, Inc. All rights reserved.</p>
                 </div>
             </div>
         </footer>

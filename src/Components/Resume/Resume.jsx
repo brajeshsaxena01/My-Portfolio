@@ -12,7 +12,7 @@ export const Resume = () => {
         </h1>
 
         <Skills>
-         
+
           <Card>
             <Image>
               <img src="/Images/js.png" alt="" />
@@ -95,7 +95,7 @@ export const Resume = () => {
               </span>
             </Text>
           </Card>
-          
+
           <Card>
             <Image>
               <img src="/Images/aws.png" alt="" />
@@ -116,7 +116,7 @@ export const Resume = () => {
               </span>
             </Text>
           </Card>
-           <Card>
+          <Card>
             <Image>
               <img src="/Images/html.png" alt="" />
             </Image>
@@ -149,7 +149,7 @@ export const Resume = () => {
               </span>
             </Text>
           </Card>
-          
+
           <Card>
             <Image>
               <img src="/Images/python.png" alt="" />
@@ -170,7 +170,7 @@ export const Resume = () => {
               </span>
             </Text>
           </Card>
-          
+
           <Card>
             <Image>
               <img src="/Images/gcp.png" alt="" />
@@ -181,7 +181,7 @@ export const Resume = () => {
               </span>
             </Text>
           </Card>
-          
+
           <Card>
             <Image>
               <img src="/Images/postgresql.png" alt="" />

@@ -32,9 +32,9 @@ const ThemeToggler = styled.div`
   top: 1.5rem;
   right: 2rem;
   z-index: 1000;
-  height: 5rem;
-  width: 5rem;
-  line-height: 5rem;
+  height: 2rem;
+  width: 2rem;
+  // line-height: 5rem;
   border-radius: 50%;
   font-size: 2rem;
   cursor: pointer;
