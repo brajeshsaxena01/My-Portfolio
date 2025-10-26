@@ -115,7 +115,11 @@ export const Navbar = () => {
                                     : 'text-gray-300 hover:text-white hover:glass'
                                     }`}
                                 style={{ color: 'var(--black)' }}
-                                onClick={handleDownload}
+                                onClick= {()=>{
+                                    if(link.name === 'Resume'){
+                                        handleDownload()
+                                    }
+                                }}
                             >
                                 {/* <span className="text-xl">{link.icon}</span> */}
                                 <span className="flex items-center gap-2">
@@ -205,7 +209,9 @@ export const Navbar = () => {
                                         transition={{ delay: index * 0.1 }}
                                         onClick={() => {
                                             setOpen(false)
-                                            handleDownload()
+                                            if(link.name === 'Resume'){
+                                                handleDownload()
+                                            }
                                         }}
                                         className={`flex items-center gap-4 p-4 rounded-2xl font-medium transition-all duration-300 ${isActive
                                             ? 'glass text-white shadow-lg'

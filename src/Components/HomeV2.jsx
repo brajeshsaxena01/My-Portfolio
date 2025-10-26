@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import Resume from "../assets/resume.pdf";
 import { motion, useAnimationFrame, useMotionValue, useTransform } from "framer-motion";
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import { FaDownload, FaCode, FaRocket } from "react-icons/fa";
