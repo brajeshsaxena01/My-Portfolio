@@ -5,7 +5,7 @@ import { FaHeart } from "react-icons/fa";
 export const AboutV2 = () => {
     return (
         <section id="about" className="py-8 px-6 relative overflow-hidden"
-            // style={{ border: '1px solid teal' }}
+        // style={{ border: '1px solid teal' }}
         >
             {/* Background Elements */}
             <div className="absolute inset-0 bg-dots opacity-20" />
@@ -21,7 +21,7 @@ export const AboutV2 = () => {
                     viewport={{ once: true }}
                     className="text-center mb-2"
                 >
-                                {/* <motion.div
+                    {/* <motion.div
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -37,7 +37,7 @@ export const AboutV2 = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-6xl font-bold gradient-text mb-4"
+                        className="text-2xl sm:text-6xl font-bold gradient-text mb-4"
                         style={{ fontFamily: 'JetBrains Mono' }}
                     >
                         About Me
@@ -49,7 +49,7 @@ export const AboutV2 = () => {
                         transition={{ duration: 0.6, delay: 0.4 }}
                         viewport={{ once: true }}
                         // className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6 text-justify"
-                        className="text-xl text-gray-900 dark:text-gray-100 max-w-3xl mx-auto leading-8 tracking-wide text-justify mb-6 transition-colors duration-300"
+                        className="text-sm sm:text-xl text-gray-900 dark:text-gray-100 max-w-3xl mx-auto leading-8 tracking-normal sm:tracking-wide text-justify mb-6 transition-colors duration-300"
                         style={{ color: 'var(--black)' }}
                     >
                         As a {" "}

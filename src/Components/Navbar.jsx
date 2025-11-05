@@ -35,7 +35,7 @@ export const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
-            setScrolled(scrollTop > 50);
+            // setScrolled(scrollTop > 50);
 
             // Update active section based on scroll position
             const sections = navLinks.map(link => link.href.substring(1));
@@ -59,12 +59,12 @@ export const Navbar = () => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
-            mobileMenuRef.current &&
-            !mobileMenuRef.current.contains(event.target) &&
-            hamburgerRef.current &&
-            !hamburgerRef.current.contains(event.target)
+                mobileMenuRef.current &&
+                !mobileMenuRef.current.contains(event.target) &&
+                hamburgerRef.current &&
+                !hamburgerRef.current.contains(event.target)
             ) {
-            setOpen(false); // only closes if open; React ignores unnecessary setState
+                setOpen(false); // only closes if open; React ignores unnecessary setState
             }
         };
         document.addEventListener("mousedown", handleClickOutside);
@@ -81,7 +81,7 @@ export const Navbar = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${scrolled
                 ? 'glass-strong border-b border-white/10 py-3'
-                : 'bg-transparent py-6'
+                : 'bg-transparent py-4 glass-strong'
                 }`}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -92,11 +92,18 @@ export const Navbar = () => {
                     className="relative flex-shrink-0 basis-1/3 md:basis-[10%] lg:basis-1/3 flex justify-start"
                 >
                     <motion.a
-                        className="font-bold gradient-text tracking-wider"
+                        className="hidden lg:block font-bold gradient-text tracking-wider"
                         style={{ color: 'var(--black)' }}
                         href="#home"
                     >
                         Brajesh Saxena
+                    </motion.a>
+                    <motion.a
+                        className="block lg:hidden font-bold gradient-text tracking-wider"
+                        style={{ color: 'var(--black)' }}
+                        href="#home"
+                    >
+                        BS
                     </motion.a>
                 </motion.div>
 
@@ -115,15 +122,15 @@ export const Navbar = () => {
                                     : 'text-gray-300 hover:text-white hover:glass'
                                     }`}
                                 style={{ color: 'var(--black)' }}
-                                onClick= {()=>{
-                                    if(link.name === 'Resume'){
+                                onClick={() => {
+                                    if (link.name === 'Resume') {
                                         handleDownload()
                                     }
                                 }}
                             >
                                 {/* <span className="text-xl">{link.icon}</span> */}
                                 <span className="flex items-center gap-2">
-                                <span className="text-sm">{link.icon}</span>
+                                    <span className="text-sm">{link.icon}</span>
                                     {link.name}
                                 </span>
                                 {/* {link.name} */}
@@ -139,14 +146,14 @@ export const Navbar = () => {
                 </div>
 
                 {/* --- RIGHT: Theme Toggler --- */}
-                <div className="hidden md:flex basis-1/3 md:basis-[10%] lg:basis-1/3 justify-end items-center">
+                <div className="hidden md:flex basis-1/3 md:basis-[10%] lg:basis-1/3 justify-end">
                     <ThemeToggler />
                 </div>
                 {/* Enhanced Mobile Menu Button */}
                 {/* <div className="w-9 h-9 flex items-center justify-center rounded-full glass-strong shadow-md"> */}
-                <div className="md:hidden -mt-20 glass rounded-xl">
+                {/* <div className="md:hidden -mt-20 glass rounded-xl">
                     <ThemeToggler />
-                </div>
+                </div> */}
                 <motion.button
                     ref={hamburgerRef}
                     whileHover={{ scale: 1.1 }}
@@ -201,32 +208,35 @@ export const Navbar = () => {
                             {navLinks.map((link, index) => {
                                 const isActive = activeSection === link.href.substring(1);
                                 return (
-                                    <motion.a
-                                        key={link.href}
-                                        href={link.href}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: index * 0.1 }}
-                                        onClick={() => {
-                                            setOpen(false)
-                                            if(link.name === 'Resume'){
-                                                handleDownload()
-                                            }
-                                        }}
-                                        className={`flex items-center gap-4 p-4 rounded-2xl font-medium transition-all duration-300 ${isActive
-                                            ? 'glass text-white shadow-lg'
-                                            : 'text-gray-300 hover:text-white hover:glass'
-                                        }`}
-                                    >
-                                        <span className="text-xl">{link.icon}</span>
-                                        <span className="text-lg" style={{ color: 'var(--black)' }}>{link.name}</span>
-                                        {isActive && (
-                                            <motion.div
-                                                layoutId="activeMobileTab"
-                                                className="ml-auto w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full"
-                                            />
-                                        )}
-                                    </motion.a>
+                                    <>
+                                        <motion.a
+                                            key={link.href}
+                                            href={link.href}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: index * 0.1 }}
+                                            onClick={() => {
+                                                setOpen(false)
+                                                if (link.name === 'Resume') {
+                                                    handleDownload()
+                                                }
+                                            }}
+                                            className={`flex items-center gap-4 p-4 rounded-2xl font-medium transition-all duration-300 ${isActive
+                                                ? 'glass text-white shadow-lg'
+                                                : 'text-gray-300 hover:text-white hover:glass'
+                                                }`}
+                                        >
+                                            <span className="text-xl">{link.icon}</span>
+                                            <span className="text-lg" style={{ color: 'var(--black)' }}>{link.name}</span>
+                                            {isActive && (
+                                                <motion.div
+                                                    layoutId="activeMobileTab"
+                                                    className="ml-auto w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full"
+                                                />
+                                            )}
+                                        </motion.a>
+                                        <ThemeToggler />
+                                    </>
                                 );
                             })}
 

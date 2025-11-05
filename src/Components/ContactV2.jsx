@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin, FaInstagram, FaPaperPlane, FaCheckCircle, FaRocket } from "react-icons/fa";
-import { BiGlobe } from "react-icons/bi";
+import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaInstagram, FaPaperPlane, FaCheckCircle, FaRocket } from "react-icons/fa";
+// import { BiGlobe } from "react-icons/bi";
 import { SiLeetcode } from "react-icons/si";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
 
 const contactInfo = [
+    {
+        icon: FaPhone,
+        title: "Mobile",
+        value: "+91 8340762814",
+        href: "tel:+918340762814",
+        color: "from-green-500 to-emerald-500"
+    },
     {
         icon: FaEnvelope,
         title: "Email",
@@ -205,7 +212,7 @@ export const ContactV2 = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                         viewport={{ once: true }}
-                        className="text-5xl md:text-6xl font-bold gradient-text mb-4"
+                        className="text-2xl sm:text-6xl font-bold gradient-text mb-4"
                         style={{ fontFamily: 'JetBrains Mono' }}
                     >
                         Get In Touch
@@ -216,7 +223,7 @@ export const ContactV2 = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                         viewport={{ once: true }}
-                        className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6"
+                        className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6"
                         style={{ color: 'var(--black)' }}
                     >
                         {/* Ready to bring your ideas to life? Let's discuss your next project and create something amazing together. */}
@@ -391,7 +398,7 @@ export const ContactV2 = () => {
                                         required
                                         placeholder="Your Email"
                                         className="lowercase-input w-full lg:h-12 px-4 py-3 sm:px-5 sm:py-4 glass rounded-xl md:rounded-2xl text-base sm:text-lg border border-white/10 focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20 text-teal-400 placeholder-gray-400 transition-all duration-300"
-                                        // style={{ textTransform: "lowercase", "--placeholder-color": "inherit", }}
+                                    // style={{ textTransform: "lowercase", "--placeholder-color": "inherit", }}
                                     />
                                 </motion.div>
 

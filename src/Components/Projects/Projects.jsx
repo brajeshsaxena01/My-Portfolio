@@ -629,11 +629,26 @@ const ProjectCard = ({ project, index }) => {
           </div>
 
           {/* Description */}
-          <p className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-6"
+          {/* <p className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-6"
             style={{ color: 'var(--black' }}
           >
             {project.description}
+          </p> */}
+
+          <p
+            className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-6 overflow-y-auto max-h-20 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent"
+            style={{ color: 'var(--black)' }}
+          >
+            {project.description}
           </p>
+
+
+          {/* <p
+            className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-6 line-clamp-5"
+            style={{ color: 'var(--black)' }}
+          >
+            {project.description}
+          </p> */}
 
           {/* Tech Stack */}
           <div className="mb-6">
@@ -670,7 +685,8 @@ const ProjectCard = ({ project, index }) => {
               className="flex-1 btn-primary flex items-center justify-center gap-2 text-sm lg:text-2xl py-3 px-4 bg-blue-200 rounded-2xl"
               style={{ color: 'var(--black' }}
             >
-              <BiGlobe className="text-2xl" />
+              <BiGlobe className="text-2xl  " />
+              {/* <BiGlobe className="text-base sm:text-xl " /> */}
               <span>Live Demo</span>
             </motion.a>
             <motion.a
@@ -728,7 +744,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-6xl font-bold gradient-text mb-4"
+            className="text-2xl sm:text-6xl font-bold gradient-text mb-4"
             style={{ fontFamily: 'JetBrains Mono' }}
           >
             My Projects

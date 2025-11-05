@@ -48,7 +48,7 @@
   --black: #fff;
 
 
-   /* --black: #fff; */
+  /* --black: #fff; */
   --light-color: #ddd;
   /* --bg-color: black; */
   --border: 0.1rem solid gray;
@@ -189,3 +189,9 @@ section {
     border-right: 0;
   }
 } */
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: 0 0.2%;
+  }
+}

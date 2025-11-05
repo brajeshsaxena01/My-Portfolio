@@ -25,7 +25,7 @@ export const ThemeToggler = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="fixed top-5 right-6 z-50 flex items-center justify-center
+            className="fixed top-4 right-6 z-50 flex items-center justify-center
                  h-10 w-10 rounded-full bg-white dark:bg-gray-800 shadow-md
                  hover:scale-110 transition-transform duration-200"
         >
