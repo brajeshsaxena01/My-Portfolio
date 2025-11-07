@@ -208,7 +208,7 @@ body {
 
 /* Button utilities */
 .btn-primary {
-  @apply relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl font-semibold text-white transition-all duration-300 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-2xl overflow-hidden;
+  @apply relative px-4 py-2 sm:px-8 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl font-semibold text-white transition-all duration-300 hover:from-indigo-500 hover:to-purple-500 shadow-lg hover:shadow-2xl overflow-hidden;
 }
 
 .btn-primary::before {
@@ -227,7 +227,7 @@ body {
 }
 
 .btn-secondary {
-  @apply relative px-8 py-4 glass rounded-2xl font-semibold text-indigo-300 hover:text-white transition-all duration-300 overflow-hidden;
+  @apply relative px-4 py-2 sm:px-8 sm:py-4 glass rounded-2xl font-semibold text-indigo-300 hover:text-white transition-all duration-300 overflow-hidden;
 }
 
 .btn-secondary::before {
