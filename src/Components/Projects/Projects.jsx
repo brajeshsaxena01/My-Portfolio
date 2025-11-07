@@ -465,7 +465,10 @@ const projects = [
   {
     id: 1,
     name: "E-Commerce",
-    description: "This self-paced project showcases a full-stack e-commerce application. It features user authentication, product management, a shopping cart with dynamic quantity adjustments, and secure payment processing through Stripe. This application demonstrates my ability to develop scalable and efficient web solutions.",
+    // description: "This self-paced project showcases a full-stack e-commerce application. It features user authentication, product management, a shopping cart with dynamic quantity adjustments, and secure payment processing through Stripe. This application demonstrates my ability to develop scalable and efficient web solutions.",
+    // description: "A full-stack e-commerce app with login/signup, product management, cart updates, and secure Stripe payments.",
+    description: "A full-stack e-commerce web app with login/signup, product management, cart updates, and secure Stripe payment integration.",
+
     stack: ["React", "Node.js", "Express.js", "MongoDB", "TailwindCSS"],
     link: "https://mern-ecommerce-ce74.onrender.com",
     github: "https://github.com/brajeshsaxena01/MERN-ecommerce",
@@ -636,7 +639,8 @@ const ProjectCard = ({ project, index }) => {
           </p> */}
 
           <p
-            className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-6 overflow-y-auto max-h-20 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent"
+            // className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-6 overflow-y-auto max-h-20 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent"
+            className="text-gray-300 text-sm lg:text-xl leading-relaxed mb-6 max-h-20"
             style={{ color: 'var(--black)' }}
           >
             {project.description}

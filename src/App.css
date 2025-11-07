@@ -38,14 +38,16 @@
 :root {
   --bg-color: #e6e6e6;
   --black: #222;
+  --gray: #374151;
   --border: 0.1rem solid rgba(0, 0, 0, 0.2);
-
+  
 }
 
 .dark {
   --bg-color: #111827;
   /* --bg-color: black; */
   --black: #fff;
+  --gray: #D1D5DB;
 
 
   /* --black: #fff; */

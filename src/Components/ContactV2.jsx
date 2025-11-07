@@ -276,7 +276,8 @@ export const ContactV2 = () => {
                                                 <h4 className="text-sm lg:text-xl md:text-lg text-white font-semibold group-hover:text-indigo-300 transition-colors" style={{ color: 'var(--black)' }} >
                                                     {info.title}
                                                 </h4>
-                                                <p className="text-gray-300 text-sm">{info.value}</p>
+                                                {/* <p className="text-gray-300 text-sm">{info.value}</p> */}
+                                                <p className="text-gray-700 text-sm" style={{ color: 'var(--gray)' }}>{info.value}</p>
                                             </div>
                                         </motion.div>
                                     );

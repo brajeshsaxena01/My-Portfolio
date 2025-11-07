@@ -186,7 +186,8 @@ const SkillCard = ({ skill, index }) => {
                     <img
                         src={skill.img}
                         alt={skill.name}
-                        className={`object-contain filter`}
+                        // className={`object-contain filter`}
+                        className={`object-contain filter w-12 h-12 sm:w-16 sm:h-16`}
                         // style={{ color: 'var(--black)' }}
                     />
                 </div>

@@ -130,7 +130,7 @@ export const Navbar = () => {
                             >
                                 {/* <span className="text-xl">{link.icon}</span> */}
                                 <span className="flex items-center gap-2">
-                                    <span className="text-sm">{link.icon}</span>
+                                    {/* <span className="text-sm">{link.icon}</span> */}
                                     {link.name}
                                 </span>
                                 {/* {link.name} */}
@@ -226,7 +226,7 @@ export const Navbar = () => {
                                                 : 'text-gray-300 hover:text-white hover:glass'
                                                 }`}
                                         >
-                                            <span className="text-xl">{link.icon}</span>
+                                            {/* <span className="text-xl">{link.icon}</span> */}
                                             <span className="text-lg" style={{ color: 'var(--black)' }}>{link.name}</span>
                                             {isActive && (
                                                 <motion.div
